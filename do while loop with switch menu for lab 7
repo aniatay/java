@@ -1,0 +1,48 @@
+/******************************************************************************
+
+                            do while loop with a 
+                            switch statement for menu
+                            
+
+*******************************************************************************/
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	int choice;
+	String address;
+	Scanner keyboard = new Scanner (System.in);   //for scanner object
+    System.out.println ("Enter your address");
+	address = keyboard.nextLine();
+	
+	do
+	{
+	System.out.print ("pick a number between 1-5");
+	choice = keyboard.nextInt();
+	keyboard.nextLine(); //consume newline
+	switch(choice)
+	{
+	    case 1:
+	        System.out.println ("You picked 1");
+	        break;
+	   case 2:
+	        System.out.println ("You picked 2");
+	        break;
+	   case 3:
+	        System.out.println ("You picked 3");
+	        break;
+	 case 0:
+	        //System.out.println ("Exit program");
+	        System.out.println ("Enter your address. Enter x if you want to terminate the program.");
+        	address = keyboard.nextLine();
+	        break;
+	 default:
+	        System.out.println ("You picked an invalid number");
+	        break;
+	}
+	    
+	}while (address.charAt(0) != 'x');
+}
+}	
+
